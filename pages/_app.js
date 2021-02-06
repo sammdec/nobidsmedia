@@ -24,9 +24,9 @@ const queryClient = new QueryClient({
 export default function App({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
-    Fathom.load("EFYQRVFH", {
+    Fathom.load("BWWQLMDB", {
       excludedDomains: ["localhost"],
-      url: "https://horse.isitmintedyet.com/script.js",
+      url: "https://frog.nobids.media/script.js",
     })
 
     function onRouteChangeComplete() {
