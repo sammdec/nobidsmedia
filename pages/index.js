@@ -108,11 +108,29 @@ export default function Home() {
         }}
       >
         {data ? (
-          <NFTE
-            contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
-            tokenId={singleNoBidsMedia?.id}
-            style={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}
-          />
+          <>
+            <NFTE
+              contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
+              tokenId={singleNoBidsMedia?.id}
+              style={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}
+            />
+            <Box css={{ display: "flex" }}>
+              <Box
+                as="a"
+                href={`https://zora.co/${singleNoBidsMedia?.owner?.id}/${singleNoBidsMedia?.id}`}
+                css={{
+                  width: "100%",
+                  color: "currentcolor",
+                  fontWeight: 600,
+                  mt: "@3",
+                  textAlign: "center",
+                }}
+              >
+                View on Zora.co (this link is broken currently but should work
+                soon)
+              </Box>
+            </Box>
+          </>
         ) : (
           <Box css={{ textAlign: "center" }}>Picking random cryptomedia...</Box>
         )}

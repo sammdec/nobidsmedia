@@ -4,6 +4,9 @@ const query = gql`
   query getMedia($contentHash: String) {
     medias(first: 1000) {
       id
+      owner {
+        id
+      }
       currentBids
     }
   }
