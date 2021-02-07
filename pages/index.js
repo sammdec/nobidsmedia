@@ -1,6 +1,7 @@
 import { useQuery } from "react-query"
 import sample from "lodash/sample"
 import { NFTE } from "@nfte/react"
+import { utils } from "ethers"
 import Box from "@components/Box"
 import Footer from "@components/Footer"
 
@@ -117,7 +118,9 @@ export default function Home() {
             <Box css={{ display: "flex" }}>
               <Box
                 as="a"
-                href={`https://zora.co/${singleNoBidsMedia?.owner?.id}/${singleNoBidsMedia?.id}`}
+                href={`https://zora.co/${utils.getAddress(
+                  singleNoBidsMedia?.owner?.id
+                )}/${singleNoBidsMedia?.id}`}
                 css={{
                   width: "100%",
                   color: "currentcolor",
@@ -126,8 +129,7 @@ export default function Home() {
                   textAlign: "center",
                 }}
               >
-                View on Zora.co (this link is broken currently but should work
-                soon)
+                View on Zora.co
               </Box>
             </Box>
           </>
