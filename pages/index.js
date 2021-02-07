@@ -8,7 +8,7 @@ import Footer from "@components/Footer"
 import mediaQuery from "@utils/mediaQuery"
 
 export default function Home() {
-  const { data } = useQuery(["mediaQuery"], () => mediaQuery())
+  const { data, refetch } = useQuery(["mediaQuery"], () => mediaQuery())
 
   const noBidsMedia = data?.medias?.filter((d) => d.currentBids.length === 0)
 
@@ -110,28 +110,39 @@ export default function Home() {
       >
         {data ? (
           <>
-            <NFTE
-              contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
-              tokenId={singleNoBidsMedia?.id}
-              style={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}
-            />
-            <Box css={{ display: "flex" }}>
+            <Box
+              css={{
+                display: "flex",
+                mb: "@3",
+                justifyContent: "space-around",
+              }}
+            >
               <Box
                 as="a"
                 href={`https://zora.co/${utils.getAddress(
                   singleNoBidsMedia?.owner?.id
                 )}/${singleNoBidsMedia?.id}`}
                 css={{
-                  width: "100%",
                   color: "currentcolor",
                   fontWeight: 600,
-                  mt: "@3",
+
                   textAlign: "center",
                 }}
               >
                 View on Zora.co
               </Box>
+              <Box
+                css={{ fontWeight: 600, textDecoration: "underline" }}
+                onClick={() => refetch()}
+              >
+                Fetch another NFT
+              </Box>
             </Box>
+            <NFTE
+              contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
+              tokenId={singleNoBidsMedia?.id}
+              style={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}
+            />
           </>
         ) : (
           <Box css={{ textAlign: "center" }}>Picking random cryptomedia...</Box>
