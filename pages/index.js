@@ -143,6 +143,7 @@ export default function Home() {
               </Box>
             </Box>
             <NFTE
+              key={singleNoBidsMedia?.id}
               contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
               tokenId={singleNoBidsMedia?.id}
               style={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}
