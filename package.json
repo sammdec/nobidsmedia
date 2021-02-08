@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@nfte/react": "^0.0.4",
+    "@nfte/react": "^0.1.0",
     "@stitches/react": "^0.0.2",
     "ethers": "^5.0.29",
     "fathom-client": "^3.0.0",

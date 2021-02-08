@@ -478,10 +478,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.0.5.tgz#c1ca664c4ffe2f79d14383323d783368833d503b"
   integrity sha512-Eo+nvW1ZhdkuxBWSsKHGDLNspUaJJQClld9R+H+EtiIuAQtTa8f2rhcQeyUOtvUNQoPyq7Em2PwUqOQD6LOOMA==
 
-"@nfte/react@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@nfte/react/-/react-0.0.4.tgz#9dcee481c6ed9fb9c166a0fe9ec72e0f3576a00a"
-  integrity sha512-eMhZtyOCytgsdp6WA6hKKABxzXfHwzZzM7Aw9u9aQP/zCaLl12GQUjyZispOeIW68pnDam2D4LvXOydrZKYTfA==
+"@nfte/react@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@nfte/react/-/react-0.1.0.tgz#6464fa41ceb0018bb9c378daf0c1982ad8226961"
+  integrity sha512-vaKOC0zwoACThuLm/qvDIxTwXp3gxMvaUQLJrSfOG47WTAaJWZyRxTIr8e4G10s1lLrWQYmIX0PSQ9tP5XCjlw==
 
 "@opentelemetry/api@0.14.0":
   version "0.14.0"
