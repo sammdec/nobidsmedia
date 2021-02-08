@@ -132,7 +132,11 @@ export default function Home() {
                 View on Zora.co
               </Box>
               <Box
-                css={{ fontWeight: 600, textDecoration: "underline" }}
+                css={{
+                  fontWeight: 600,
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                }}
                 onClick={() => refetch()}
               >
                 Fetch another NFT
